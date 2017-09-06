@@ -15,3 +15,4 @@ pipeline:
     commands:
       - kubectl -s https://api.theselfservicedev.com:6443 get pods --insecure-skip-tls-verify=true --token $K8S_TOKEN
     secrets: [ k8s_token ]
+    
