@@ -14,6 +14,6 @@ pipeline:
     image: laszlocloud/kubectl:1.0.0
     commands:
       - kubectl apply -f java-app.yml --server https://api.theselfservicedev.com:6443 --insecure-skip-tls-verify=true --token $K8S_TOKEN
-      - kubectl rollout status deployment/java-app -w
+      - kubectl rollout status deployment/java-app -w --server https://api.theselfservicedev.com:6443 --insecure-skip-tls-verify=true --token $K8S_TOKEN
     secrets: [ k8s_token ]
 
