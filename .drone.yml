@@ -5,7 +5,7 @@ pipeline:
       - ./gradlew clean build
 
   docker:
-    image: docker
+    image: laszlocloud/build-image
     commands:
       - docker pull laszlocloud/java-app
       - docker build --rm=false -t laszlocloud/java-app .
