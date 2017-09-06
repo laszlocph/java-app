@@ -10,5 +10,5 @@ pipeline:
       - docker pull laszlocloud/java-app
       - docker build --rm=false -t laszlocloud/java-app .
       - docker push laszlocloud/java-app
-
-  
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
