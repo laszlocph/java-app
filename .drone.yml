@@ -1,0 +1,5 @@
+pipeline:
+  build:
+    image: anapsix/alpine-java
+    commands:
+      - ./gradlew clean build
