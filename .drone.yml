@@ -13,4 +13,4 @@ pipeline:
   deploy:
     image: laszlocloud/kubectl:1.0.0
     commands:
-      - kubectl -s https://api.theselfservicedev.com:6443 get pods
+      - kubectl -s https://api.theselfservicedev.com:6443 get pods --insecure-skip-tls-verify=true --token $K8S_TOKEN
