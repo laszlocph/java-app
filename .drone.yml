@@ -3,3 +3,12 @@ pipeline:
     image: anapsix/alpine-java:8_jdk
     commands:
       - ./gradlew clean build
+
+  docker:
+    image: docker
+    commands:
+      - docker pull laszlocloud/java-app
+      - docker build --rm=false -t laszlocloud/java-app .
+      - docker push laszlocloud/java-app
+
+  
