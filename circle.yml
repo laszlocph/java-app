@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+  node:
+    version: 7.6.0
+
+dependencies:
+  pre:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL
+    - docker pull laszlocloud/todomvc-springboot-backend
+
+test:
+  override:
+    - echo "test"
+
+deployment:
+  hub:
+    branch: /.*/
+    commands:
+      - ./ci.sh
