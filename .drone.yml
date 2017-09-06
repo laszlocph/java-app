@@ -9,3 +9,8 @@ pipeline:
     repo: laszlocloud/java-app
     tags: [ latest ]
     secrets: [ docker_username, docker_password ]
+
+  deploy:
+    image: ubuntu
+    commands:
+      - cat java-app.yml
