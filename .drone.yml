@@ -11,6 +11,6 @@ pipeline:
     secrets: [ docker_username, docker_password ]
 
   deploy:
-    image: laszlocloud/kubectl
+    image: laszlocloud/kubectl:1.0.0
     commands:
       - kubectl -s https://api.theselfservicedev.com:6443 get pods
