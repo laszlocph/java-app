@@ -63,7 +63,7 @@ items:
       kubernetes.io/ingress.class: "external"
   spec:
     rules:
-    - host: java-app2.theselfservicedev.com
+    - host: java-app.theselfservicedev.com
       http:
         paths:
         - backend:
